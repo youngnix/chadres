@@ -57,7 +57,7 @@ place_piece(const struct Board *board, const char piece, unsigned int x, unsigne
 void
 board_init(struct Board *board)
 {
-    board->squares = calloc(8 * 8, (sizeof *board->squares));
+    board->squares = calloc(8 * 8, (sizeof board->squares));
 
     for (unsigned int i = 0; i < strlen(BOARD_ARRANGEMENT); i++)
     {
