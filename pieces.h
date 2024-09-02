@@ -2,29 +2,27 @@
 
 #include "board.h"
 #include "util.h"
+
 enum PieceType
 {
     PIECE_PAWN,
     PIECE_ROOK,
-    PIECE_KING,
     PIECE_KNIGHT,
-    PIECE_QUEEN,
     PIECE_BISHOP,
-    PIECE_TYPE_COUNT,
+    PIECE_QUEEN,
+    PIECE_KING,
+    PIECE_TYPE,
 };
 
-enum PieceColor
-{
-    PIECE_BLACK,
-    PIECE_WHITE,
-    PIECE_COLOR_COUNT,
-};
-
+/** @struct Piece
+ *  @brief Chess pieces
+ *  @var Piece::color
+ *  Used for determining the piece's color. Use 'false' or 0 for black and 'true' or 1 for white.
+ */
 struct Piece
 {
     enum PieceType type;
-    unsigned char color;
-	vec2 *(*possibilities)(const struct Board *, unsigned int, unsigned int);
+    int color;
 };
 
-struct Piece *create_piece(enum PieceType type, enum PieceColor color, vec2 *(*possibilities_func)(const struct Board *, unsigned int, unsigned int));
+struct Piece *piece_create(enum PieceType type, int color);

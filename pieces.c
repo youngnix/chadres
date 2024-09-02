@@ -1,12 +1,13 @@
 #include "pieces.h"
+#include "board.h"
 #include <stdlib.h>
 
 struct Piece *
-create_piece(enum PieceType type, enum PieceColor color, vec2 *(*possibilities_func)(const struct Board *, unsigned int, unsigned int))
+piece_create(enum PieceType type, int color)
 {
     struct Piece *piece = calloc(1, (sizeof *piece));
 
-    *piece = (struct Piece){.type = type, .color = color, .possibilities = possibilities_func};
+    *piece = (struct Piece){.type = type, .color = color};
 
     return piece;
 }

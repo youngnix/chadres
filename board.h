@@ -1,9 +1,8 @@
 #pragma once
 
 #include "pieces.h"
-#include "util.h"
 
-static const unsigned int BOARD_SQUARED = 8;
+static const unsigned int BOARD_SQRT = 8;
 static const char *BOARD_ARRANGEMENT =
     "RNBQKBNR"
     "PPPPPPPP"

@@ -1,6 +1,3 @@
-#ifndef UTIL_H_
-#define UTIL_H_
+#pragma once
 
-typedef float vec2[2];
-
-#endif
+typedef double vec2[2];

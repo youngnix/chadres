@@ -5,6 +5,6 @@ project("Chadres"
 	VERSION 0.1.0
 	LANGUAGES C)
 
-set(SRC main.c pawn.c board.c util.h pawn.h board.h pieces.h king.c king.h pieces.c)
+set(SRC main.c board.c util.h board.h pieces.h pieces.c)
 
 add_executable(${PROJECT_NAME} ${SRC})
